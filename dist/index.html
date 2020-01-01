@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>weatherJS</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kulim+Park&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>WeatherJS</h1>
+            <h2>Non un click</h2>
+        </header>
+        <div class="input">
+            <input type="text" name="paese" value="Inserisci città">
+            <img id="response">
+        </div>
+        <div class="risultato">
+            <!--<h3 id="paese"></h3>
+            <h4 id="description"></h4>-->
+            <p id="paese"></p>
+            <p id="description"></p>
+            <span id="icon-span"><img id="icon"></span>
+            <table>
+                <tr>
+                    <td><strong>Temperatura: </strong></td>
+                    <td id="temp"> - </td>
+                </tr>
+                <tr>
+                    <td><strong>Temperatura percepita: </strong></td>
+                    <td id="feels_like"> - </td>
+                </tr>
+                <tr>
+                    <td><strong>Pressione: </strong></td>
+                    <td id="pressure"> - </td>
+                </tr>
+                <tr>
+                    <td><strong>Umidità: </strong></td>
+                    <td id="humidity"> - </td>
+                </tr>
+                <tr>
+                    <td><strong>Minima: </strong></td>
+                    <td id="temp_min"> - </td>
+                </tr>
+                <tr>
+                    <td><strong>Massima: </strong></td>
+                    <td id="temp_max"> - </td>
+                </tr>
+            </table>
+            <section id="sezione-vento">
+                <h2>Vento</h2>
+                <p>Velocità: <span id="vento"> - </span></p>
+                <p>Direzione: <span id="direzione"> - </span></p>
+            </section>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

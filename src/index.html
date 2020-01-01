@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>WeatherJS</h1>
+            <h2>Il meteo a portata di un click</h2>
+        </header>
+        <div class="input">
+            <input type="text" name="paese" value="Inserisci città">
+            <button type="button" name="cerca">Cerca</button>
+        </div>
+        <br>
+        <hr>
+        <div class="risultato">
+            <h3 id="paese"></h3>
+            <img>
+            <p id="description"></p>
+            <table>
+                <tr>
+                    <td>Temperatura: </td>
+                    <td id="temp"> - </td>
+                </tr>
+                <tr>
+                    <td>Temperatura percepita: </td>
+                    <td id="feels_like"> - </td>
+                </tr>
+                <tr>
+                    <td>Pressione: </td>
+                    <td id="pressure"> - </td>
+                </tr>
+                <tr>
+                    <td>Umidità: </td>
+                    <td id="humidity"> - </td>
+                </tr>
+                <tr>
+                    <td>Minima: </td>
+                    <td id="temp_min"> - </td>
+                </tr>
+                <tr>
+                    <td>Massima: </td>
+                    <td id="temp_max"> - </td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
