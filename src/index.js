@@ -20,26 +20,42 @@ const wind_direction = document.querySelector("#direzione");
 
 input_field.focus();
 input_field.select();
-input_field.addEventListener("keyup", getWeather);
+input_field.addEventListener("keyup", createUrl);
+window.addEventListener("load", getCurrentPosition);
 
-function getWeather() {
-    let paese = input_field.value;
-    let url = "http://api.openweathermap.org/data/2.5/weather?q=" + paese + "&appid=" + api_key + "&units=metric&lang=it";
+function getCurrentPosition() {
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            url = "http://api.openweathermap.org/data/2.5/weather?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&appid=" + api_key + "&units=metric&lang=it";
+            getWeather(url);
+        });
+    }
+}
+
+function createUrl() {
+    let url;
+    if (input_field.value !== "Inserisci città") {
+        let paese = input_field.value;
+        url = "http://api.openweathermap.org/data/2.5/weather?q=" + paese + "&appid=" + api_key + "&units=metric&lang=it";
+        getWeather(url);
+    }
+}
+
+function getWeather(url) {
     $.ajax({
         async: true,
         url: url,
         success: function(data) {
             callback(data);
-            response_img.setAttribute("src", "/icons/checkmark.svg");
+            response_img.setAttribute("src", "../icons/checkmark.svg");
         },
         error: function() {
-            response_img.setAttribute("src", "/icons/wrong.svg");
+            response_img.setAttribute("src", "../icons/wrong.svg");
         },
         dataType: 'json',
         type: 'GET'
     });
 }
-
 
 function callback(data) {
     const id = data.sys.id;
@@ -52,9 +68,10 @@ function callback(data) {
     const humidity = main.humidity;
     const temp_min = main.temp_min;
     const temp_max = main.temp_max;
-    paese_field.innerHTML = data.name + data.sys.country.sub() + (" - id: " + id).sub();
-    icon_span.style.backgroundColor = "#87ceeb";
+    paese_field.innerHTML = data.name + data.sys.country.sub() /* + ("- id: " + id).sub()*/ ;
     img_field.setAttribute("src", "http://openweathermap.org/img/wn/" + icon + "@2x.png");
+    img_field.style.backgroundColor = "#87ceeb";
+    img_field.style.borderRadius = "20px";
     description = description.replace(description[0], description[0].toUpperCase());
     description_field.textContent = description;
     temp_field.textContent = temp + "° C";
