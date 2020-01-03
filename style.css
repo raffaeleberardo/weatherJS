@@ -31,7 +31,7 @@ main {
 
 h1,
 h2 {
-    font-family: 'Lobster', sans-serif;
+    font-family: 'Concert One', sans-serif;
     font-size: 2.5em;
     color: #9e1602;
     text-shadow: #0481b3 2px 2px;
@@ -51,7 +51,7 @@ input {
 
 #paese {
     font-size: 2.5em;
-    font-family: 'Lobster';
+    font-family: 'Concert One';
     font-weight: bolder;
 }
 
@@ -78,7 +78,7 @@ tr:nth-child(even) {
 }
 
 #temperatura-primo-piano {
-    font-family: 'Lobster';
+    font-family: 'Concert One';
     font-size: 2em;
 }
 

@@ -77,7 +77,7 @@ function callback(data) {
     const humidity = main.humidity;
     const temp_min = main.temp_min;
     const temp_max = main.temp_max;
-    paese_field.innerHTML = data.name + data.sys.country.sub() /* + ("- id: " + id).sub()*/ ;
+    paese_field.innerHTML = data.name + (data.sys.country + " - ID: " + id).sub();
     if (location.protocol === "http:") {
         img_field.setAttribute("src", "http://openweathermap.org/img/wn/" + icon + "@2x.png");
     } else {
