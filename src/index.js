@@ -26,7 +26,9 @@ input_field.select();
 input_field.addEventListener("keyup", createUrl);
 window.addEventListener("load", getCurrentPosition);
 more_details.addEventListener("click", showDetails);
-minus_details.addEventListener("click", hideDetails);
+minus_details.addEventListener("click", function() {
+    setTimeout(hideDetails, 1000)
+});
 
 function getCurrentPosition() {
     if ("geolocation" in navigator) {
