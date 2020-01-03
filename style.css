@@ -1,5 +1,5 @@
 * {
-    margin: 5px;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -11,6 +11,12 @@ body {
     font-family: 'Kulim Park', sans-serif;
     width: 100%;
     min-height: 100vh;
+}
+
+div,
+section {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 main,
@@ -34,19 +40,18 @@ input {
 
 #response {
     position: relative;
-    top: 21px;
+    top: 15px;
+    left: 10px;
     height: 40px;
 }
 
 #paese {
-    /*align-self: center;*/
     font-size: 2.5em;
     font-family: 'Lobster';
     font-weight: bolder;
 }
 
 #description {
-    /*align-self: center;*/
     font-size: 2em;
     font-weight: bold;
 }
@@ -57,10 +62,9 @@ input {
 }
 
 table {
-    min-height: 70vh;
+    min-height: 60vh;
     margin: 0;
     padding: 0;
-    width: 100%;
 }
 
 tr:nth-child(even) {
