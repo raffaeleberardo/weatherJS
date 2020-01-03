@@ -63,6 +63,7 @@ input {
 
 table {
     min-height: 60vh;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
