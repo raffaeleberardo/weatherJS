@@ -29,10 +29,6 @@ main {
     flex-grow: 1;
 }
 
-header {
-    margin-bottom: 30px;
-}
-
 h1,
 h2 {
     font-family: 'Concert One', sans-serif;
@@ -98,11 +94,12 @@ td {
     text-shadow: #87ceeb 1px 1px;
 }
 
-header,
+
+/*header,
 main,
 footer {
     flex-shrink: 0;
-}
+}*/
 
 footer {
     margin-bottom: 0;
