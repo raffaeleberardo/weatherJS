@@ -7,10 +7,10 @@
 body {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
     text-align: center;
     font-family: 'Kulim Park', sans-serif;
     width: 100%;
-    min-height: 100vh;
 }
 
 div,
@@ -23,6 +23,10 @@ main,
 .risultato {
     display: flex;
     flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
 }
 
 h1,
@@ -90,9 +94,10 @@ td {
     text-shadow: #87ceeb 1px 1px;
 }
 
+header,
+main,
 footer {
-    justify-content: flex-end;
-    order: 1;
+    flex-shrink: 0;
 }
 
 .flaticon {
