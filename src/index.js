@@ -26,7 +26,11 @@ window.addEventListener("load", getCurrentPosition);
 function getCurrentPosition() {
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(function(position) {
-            url = "http://api.openweathermap.org/data/2.5/weather?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&appid=" + api_key + "&units=metric&lang=it";
+            if (location.protocol === 'http:') {
+                url = "http://api.openweathermap.org/data/2.5/weather?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&appid=" + api_key + "&units=metric&lang=it";
+            } else {
+                url = "https://api.openweathermap.org/data/2.5/weather?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&appid=" + api_key + "&units=metric&lang=it";
+            }
             getWeather(url);
         });
     }
@@ -36,7 +40,12 @@ function createUrl() {
     let url;
     if (input_field.value !== "Inserisci città") {
         let paese = input_field.value;
-        url = "http://api.openweathermap.org/data/2.5/weather?q=" + paese + "&appid=" + api_key + "&units=metric&lang=it";
+        if (location.protocol === 'http:') {
+            url = "http://api.openweathermap.org/data/2.5/weather?q=" + paese + "&appid=" + api_key + "&units=metric&lang=it";
+        } else {
+            url = "https://api.openweathermap.org/data/2.5/weather?q=" + paese + "&appid=" + api_key + "&units=metric&lang=it";
+
+        }
         getWeather(url);
     }
 }
