@@ -22,12 +22,15 @@ section {
 main,
 .risultato {
     display: flex;
-    align-items: stretch;
     flex-direction: column;
 }
 
 main {
     flex-grow: 1;
+}
+
+header {
+    margin-bottom: 30px;
 }
 
 h1,
