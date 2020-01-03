@@ -91,6 +91,7 @@ td {
 }
 
 footer {
+    justify-content: flex-end;
     order: 1;
 }
 
