@@ -6,7 +6,7 @@
     <title>weatherJS</title>
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kulim+Park&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
 
     <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
@@ -43,43 +43,45 @@
             <img id="icon">
             <table>
                 <tr id="temperatura-primo-piano">
-                    <td><strong>Temperatura: </strong></td>
+                    <td>Temperatura: </td>
                     <td id="temp"> - </td>
                 </tr>
                 <tr>
-                    <td><strong>Temperatura percepita: </strong></td>
+                    <td>Temperatura percepita: </td>
                     <td id="feels_like"> - </td>
                 </tr>
                 <tr>
-                    <td><strong>Pressione: </strong></td>
+                    <td>Pressione: </td>
                     <td id="pressure"> - </td>
                 </tr>
                 <tr>
-                    <td><strong>Umidità: </strong></td>
+                    <td>Umidità: </td>
                     <td id="humidity"> - </td>
                 </tr>
                 <tr>
-                    <td><strong>Minima: </strong></td>
+                    <td>Minima: </td>
                     <td id="temp_min"> - </td>
                 </tr>
                 <tr>
-                    <td><strong>Massima: </strong></td>
+                    <td>Massima: </td>
                     <td id="temp_max"> - </td>
                 </tr>
             </table>
-            <section id="sezione-vento">
-                <h2>Vento</h2>
+            <section>
+                <h2 id="h2-vento">Vento</h2>
                 <p>Velocità: <span id="vento"> - </span></p>
                 <p>Direzione: <span id="direzione"> - </span></p>
             </section>
         </div>
+    </main>
+    <footer>
         <div class="flaticon">
             Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
             <br>Icons made by <a href="https://www.flaticon.com/authors/xnimrodx" title="xnimrodx">xnimrodx</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
         </div>
-    </main>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="main.js"></script>
+    <script src="dist/main.js"></script>
 </body>
 
 </html>

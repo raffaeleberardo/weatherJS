@@ -47,10 +47,10 @@ function getWeather(url) {
         url: url,
         success: function(data) {
             callback(data);
-            response_img.setAttribute("src", "../icons/checkmark.svg");
+            response_img.setAttribute("src", "icons/checkmark.svg");
         },
         error: function() {
-            response_img.setAttribute("src", "../icons/wrong.svg");
+            response_img.setAttribute("src", "icons/wrong.svg");
         },
         dataType: 'json',
         type: 'GET'
