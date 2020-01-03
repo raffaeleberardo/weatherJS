@@ -24,7 +24,7 @@ main {
 }
 
 .tutto-schermo {
-    min-height: 99vh;
+    min-height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
