@@ -67,7 +67,7 @@ input {
 
 table {
     min-height: 60vh;
-    width: 100%;
+    min-width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -100,7 +100,9 @@ footer {
     flex-shrink: 0;
 }
 
-.flaticon {
+footer {
+    min-height: 50px;
+    margin-bottom: 0;
     text-align: center;
     background-color: lightgray;
 }
