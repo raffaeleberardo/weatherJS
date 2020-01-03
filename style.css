@@ -31,6 +31,7 @@ main {
 
 h1,
 h2 {
+    margin-bottom: 15px;
     font-family: 'Concert One', sans-serif;
     font-size: 2.5em;
     color: #9e1602;
@@ -94,12 +95,11 @@ td {
     text-shadow: #87ceeb 1px 1px;
 }
 
-
-/*header,
+header,
 main,
 footer {
     flex-shrink: 0;
-}*/
+}
 
 footer {
     margin-bottom: 0;
