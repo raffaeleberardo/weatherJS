@@ -78,7 +78,11 @@ function callback(data) {
     const temp_min = main.temp_min;
     const temp_max = main.temp_max;
     paese_field.innerHTML = data.name + data.sys.country.sub() /* + ("- id: " + id).sub()*/ ;
-    img_field.setAttribute("src", "http://openweathermap.org/img/wn/" + icon + "@2x.png");
+    if (location.protocol === "http:") {
+        img_field.setAttribute("src", "http://openweathermap.org/img/wn/" + icon + "@2x.png");
+    } else {
+        img_field.setAttribute("src", "https://openweathermap.org/img/wn/" + icon + "@2x.png");
+    }
     img_field.style.backgroundColor = "#87ceeb";
     img_field.style.borderRadius = "20px";
     description = description.replace(description[0], description[0].toUpperCase());
