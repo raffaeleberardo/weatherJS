@@ -27,7 +27,7 @@
 </head>
 
 <body>
-    <main>
+    <main id="home">
         <div class="tutto-schermo">
             <header>
                 <h1>Give me some Weather</h1>
@@ -44,10 +44,12 @@
             <h2 id="h2-vento">Vento</h2>
             <p class="p-vento">Velocità: <span id="vento"> - </span></p>
             <p class="p-vento">Direzione: <span id="direzione"> - </span></p>
-            <a href="#show-more"><img id="plus-icon" src="icons/plus.svg" alt="plus-icon"></a>
+            <a href="#show-more">
+                <img id="plus-icon" src="icons/plus.svg" alt="show-more">
+            </a>
         </div>
-        <div class="dettagli">
-            <table id="show-more">
+        <div id="show-more">
+            <table>
                 <tr>
                     <td>Temperatura percepita: </td>
                     <td id="feels_like"> - </td>
@@ -69,12 +71,16 @@
                     <td id="temp_max"> - </td>
                 </tr>
             </table>
+            <a href="#home">
+                <img id="negative-icon" src="icons/negative.svg" alt="plus-icon">
+            </a>
         </div>
     </main>
     <footer>
         Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
         <br>Icons made by <a href="https://www.flaticon.com/authors/xnimrodx" title="xnimrodx">xnimrodx</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
         <br>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        <br>Icons made by <a href="https://www.flaticon.com/authors/alfredo-hernandez" title="Alfredo Hernandez">Alfredo Hernandez</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="dist/main.js"></script>

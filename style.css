@@ -24,7 +24,7 @@ main {
 }
 
 .tutto-schermo {
-    min-height: 95vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -67,14 +67,19 @@ input {
     align-self: center;
 }
 
-#plus-icon {
-    margin-top: 20px;
-    height: 50px;
+#show-more {
+    display: none;
+    min-height: 100vh;
+}
+
+#plus-icon,
+#negative-icon {
+    margin: 10px;
+    height: 32px;
 }
 
 table {
-    margin-top: 30px;
-    min-height: 100vh;
+    min-height: 90vh;
     width: 100%;
 }
 

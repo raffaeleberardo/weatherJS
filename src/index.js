@@ -17,12 +17,16 @@ const tempMax_field = document.querySelector("#temp_max");
 const wind_field = document.querySelector("#vento");
 const wind_direction = document.querySelector("#direzione");
 const more_details = document.querySelector("#plus-icon");
+const minus_details = document.querySelector("#negative-icon");
+const show_details = document.querySelector("#show-more");
 //main 
 
 input_field.focus();
 input_field.select();
 input_field.addEventListener("keyup", createUrl);
 window.addEventListener("load", getCurrentPosition);
+more_details.addEventListener("click", showDetails);
+minus_details.addEventListener("click", hideDetails);
 
 function getCurrentPosition() {
     if ("geolocation" in navigator) {
@@ -96,4 +100,12 @@ function callback(data) {
     tempMax_field.textContent = temp_max + "° C";
     wind_field.textContent = data.wind.speed + " m/s";
     wind_direction.textContent = (data.wind.deg === undefined) ? " - " : data.wind.deg + "°";
+}
+
+function showDetails() {
+    show_details.style.display = "block";
+}
+
+function hideDetails() {
+    show_details.style.display = "none";
 }
