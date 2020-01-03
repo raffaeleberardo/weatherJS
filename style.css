@@ -24,7 +24,7 @@ main {
 }
 
 .tutto-schermo {
-    min-height: 95vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -79,7 +79,7 @@ input {
 }
 
 table {
-    min-height: 85vh;
+    min-height: 90vh;
     width: 100%;
 }
 
