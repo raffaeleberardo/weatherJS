@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -13,20 +17,17 @@ body {
     width: 100%;
 }
 
-div,
-section {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-main,
-.risultato {
+main {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 
-main {
-    flex-grow: 1;
+.tutto-schermo {
+    min-height: 99vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 h1,
@@ -66,19 +67,22 @@ input {
     align-self: center;
 }
 
+#plus-icon {
+    margin-top: 20px;
+    height: 50px;
+}
+
 table {
-    min-height: 60vh;
-    min-width: 100%;
-    margin: 0;
-    padding: 0;
+    margin-top: 30px;
+    min-height: 100vh;
+    width: 100%;
 }
 
-tr:nth-child(even) {
+tr:nth-child(odd) {
     background-color: #87ceeb;
-    border-bottom: 1px solid #ddd;
 }
 
-#temperatura-primo-piano {
+#temp {
     font-family: 'Concert One';
     font-size: 2em;
 }
@@ -89,10 +93,9 @@ td {
     text-align: center;
 }
 
-#h2-vento {
-    color: #000;
-    margin-top: 10px;
-    text-shadow: #87ceeb 1px 1px;
+.p-vento {
+    font-size: 2em;
+    font-weight: bold;
 }
 
 header,
@@ -102,7 +105,6 @@ footer {
 }
 
 footer {
-    margin-bottom: 0;
     padding: 5px;
     text-align: center;
     background-color: lightgray;

@@ -28,22 +28,26 @@
 
 <body>
     <main>
-        <header>
-            <h1>Give me some Weather</h1>
-            <h2>Simple forecast</h2>
-        </header>
-        <div class="input">
-            <input type="text" name="paese" value="Inserisci città">
-            <img id="response">
-        </div>
-        <div class="risultato">
+        <div class="tutto-schermo">
+            <header>
+                <h1>Give me some Weather</h1>
+                <h2>Simple forecast</h2>
+            </header>
+            <div class="input">
+                <input type="text" name="paese" value="Inserisci città">
+                <img id="response">
+            </div>
             <p id="paese"></p>
             <p id="description"></p>
             <img id="icon">
-            <table>
-                <tr id="temperatura-primo-piano">
-                    <td colspan="2" id="temp"> - </td>
-                </tr>
+            <p id="temp">-</p>
+            <h2 id="h2-vento">Vento</h2>
+            <p class="p-vento">Velocità: <span id="vento"> - </span></p>
+            <p class="p-vento">Direzione: <span id="direzione"> - </span></p>
+            <a href="#show-more"><img id="plus-icon" src="icons/plus.svg" alt="plus-icon"></a>
+        </div>
+        <div class="dettagli">
+            <table id="show-more">
                 <tr>
                     <td>Temperatura percepita: </td>
                     <td id="feels_like"> - </td>
@@ -65,16 +69,12 @@
                     <td id="temp_max"> - </td>
                 </tr>
             </table>
-            <section>
-                <h2 id="h2-vento">Vento</h2>
-                <p>Velocità: <span id="vento"> - </span></p>
-                <p>Direzione: <span id="direzione"> - </span></p>
-            </section>
         </div>
     </main>
     <footer>
         Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
         <br>Icons made by <a href="https://www.flaticon.com/authors/xnimrodx" title="xnimrodx">xnimrodx</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        <br>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="dist/main.js"></script>

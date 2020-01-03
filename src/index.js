@@ -16,6 +16,7 @@ const tempMin_field = document.querySelector("#temp_min");
 const tempMax_field = document.querySelector("#temp_max");
 const wind_field = document.querySelector("#vento");
 const wind_direction = document.querySelector("#direzione");
+const more_details = document.querySelector("#plus-icon");
 //main 
 
 input_field.focus();
