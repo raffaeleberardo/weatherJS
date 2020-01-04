@@ -5,8 +5,7 @@ const input_field = document.querySelector("input");
 const response_img = document.querySelector("#response");
 //Campi informazioni HTML
 const paese_field = document.querySelector("#paese");
-const icon_span = document.querySelector("#icon-span");
-const img_field = document.querySelector("#icon");
+const img_field = document.querySelector("#weather");
 const description_field = document.querySelector("#description");
 const temp_field = document.querySelector("#temp");
 const feels_like_field = document.querySelector("#feels_like");
@@ -18,7 +17,7 @@ const wind_field = document.querySelector("#vento");
 const wind_direction = document.querySelector("#direzione");
 const more_details = document.querySelector("#plus-icon");
 const minus_details = document.querySelector("#negative-icon");
-const show_details = document.querySelector("#show-more");
+const show_details = document.querySelector("#dettagli");
 //main 
 
 input_field.focus();
@@ -27,7 +26,7 @@ input_field.addEventListener("keyup", createUrl);
 window.addEventListener("load", getCurrentPosition);
 more_details.addEventListener("click", showDetails);
 minus_details.addEventListener("click", function() {
-    setTimeout(hideDetails, 1000)
+    setTimeout(hideDetails, 500)
 });
 
 function getCurrentPosition() {
@@ -90,7 +89,6 @@ function callback(data) {
     } else {
         img_field.setAttribute("src", "https://openweathermap.org/img/wn/" + icon + "@2x.png");
     }
-    img_field.style.backgroundColor = "#87ceeb";
     img_field.style.borderRadius = "20px";
     description = description.replace(description[0], description[0].toUpperCase());
     description_field.textContent = description;

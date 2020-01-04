@@ -9,112 +9,140 @@ html {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    text-align: center;
-    font-family: 'Kulim Park', sans-serif;
-    width: 100%;
+    background-color: #75b4e3;
+    font-family: "Source Sans Pro", sans-serif;
 }
+
+
+/*main>primo piano, dettagli, footer*/
 
 main {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    align-items: center;
+    width: 95vw;
 }
 
-.tutto-schermo {
-    min-height: 100vh;
+
+/*info apertura app*/
+
+#primo-piano {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: stretch;
+    min-height: 100vh;
 }
+
+
+/*header*/
 
 h1,
 h2 {
-    margin-bottom: 20px;
-    font-family: 'Concert One', sans-serif;
-    font-size: 2.5em;
-    color: #9e1602;
-    text-shadow: #0481b3 2px 2px;
+    font-family: "Playfair Display", serif;
 }
 
+.icon {
+    margin: 10px;
+    height: 30px;
+}
+
+
+/*sezione di input*/
+
 input {
-    padding: 10px;
-    width: 90%;
+    width: 75vw;
+    padding: 5px;
+    margin: 5px 0px;
 }
 
 #response {
     position: relative;
-    top: 15px;
-    left: 10px;
-    height: 40px;
+    top: 20px;
+    left: 5px;
 }
 
-#paese {
-    font-size: 2.5em;
-    font-family: 'Concert One';
-    font-weight: bolder;
+
+/*temperatura e vento*/
+
+#info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95vw;
 }
 
-#description {
-    font-size: 2em;
-    font-weight: bold;
+#info-temperatura,
+#info-vento {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60vh;
 }
 
-#icon {
-    margin: 10px;
-    align-self: center;
+#weather {
+    height: 150px;
+    width: 150px;
 }
 
-#show-more {
+
+/*tabella e icona meno*/
+
+#dettagli {
     display: none;
-    min-height: 100vh;
 }
 
-#plus-icon,
-#negative-icon {
-    margin: 10px;
-    height: 32px;
+#posizionamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100vw;
 }
 
 table {
     min-height: 90vh;
-    width: 100%;
+    width: 105vw;
 }
 
-tr:nth-child(odd) {
-    background-color: #87ceeb;
-}
-
-#temp {
-    font-family: 'Concert One';
-    font-size: 2em;
+tr {
+    width: 95vw;
 }
 
 td {
-    font-size: 1.5em;
-    padding: 15px;
     text-align: center;
 }
 
-.p-vento {
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+
+/*footer*/
+
+footer {
+    width: 95vw;
+    text-align: center;
+}
+
+
+/*testo generale*/
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
     font-size: 2em;
-    font-weight: bold;
 }
 
-header,
-main,
-footer {
-    flex-shrink: 0;
+p,
+td {
+    font-size: 1.7em;
 }
 
-footer {
-    padding: 5px;
-    text-align: center;
-    background-color: lightgray;
-}
-
-footer>a {
-    text-decoration: none;
+#temp {
+    font-size: 3em;
+    font-weight: bolder;
 }
