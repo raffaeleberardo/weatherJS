@@ -65,21 +65,22 @@ input {
 
 /*temperatura e vento*/
 
-#info {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 95vw;
-}
-
-#info-temperatura,
-#info-vento {
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 60vh;
+@media only screen and (min-width: 500px) {
+    #info {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 95vw;
+    }
+    #info-temperatura,
+    #info-vento {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 60vh;
+    }
 }
 
 #weather {
