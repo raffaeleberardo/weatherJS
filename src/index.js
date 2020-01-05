@@ -4,6 +4,7 @@ let api_key = process.env.API_KEY;
 const input_field = document.querySelector("input");
 const response_img = document.querySelector("#response");
 const save_button = document.querySelector("#save");
+const clear_button = document.querySelector("#clear");
 //Campi informazioni HTML
 const paese_field = document.querySelector("#paese");
 const img_field = document.querySelector("#weather");
@@ -28,9 +29,14 @@ input_field.addEventListener("keyup", createUrl);
 window.addEventListener("load", getCurrentPosition);
 more_details.addEventListener("click", showDetails);
 minus_details.addEventListener("click", function() {
-    setTimeout(hideDetails, 500)
+    setTimeout(hideDetails, 750)
 });
 save_button.addEventListener("click", saveCity);
+clear_button.addEventListener("click", function() {
+    localStorage.clear();
+    clear_button.style.display = "none";
+    alert("Memoria svuotata!");
+});
 
 function getCurrentPosition() {
     if (localStorage.city !== undefined) {
@@ -75,8 +81,7 @@ function getWeather(url) {
         success: function(data) {
             callback(data);
             response_img.setAttribute("src", "icons/checkmark.svg");
-            save_button.style.display = "block";
-
+            save_button.style.display = "inline";
         },
         error: function() {
             response_img.setAttribute("src", "icons/wrong.svg");
@@ -127,7 +132,7 @@ function toTextualDescription(degree) {
     if (degree > 122.5) return 'Sud Est';
     if (degree > 67.5) return 'Est';
     if (degree > 22.5) { return 'Nord Est'; }
-    return 'Northerly';
+    return 'Nord';
 }
 
 function showDetails() {
@@ -140,5 +145,6 @@ function hideDetails() {
 
 function saveCity() {
     localStorage.city = salvaPaese;
-    alert("Salvataggio di " + salvaPaese + "effettuato correttamente!");
+    alert("Salvataggio di " + salvaPaese + " effettuato correttamente!");
+    clear_button.style.display = "inline";
 }
