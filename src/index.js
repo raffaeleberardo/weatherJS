@@ -48,6 +48,7 @@ function getCurrentPosition() {
 
         }
         getWeather(url);
+        clear_button.style.display = "inline";
     } else if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(function(position) {
             if (location.protocol === 'http:') {
