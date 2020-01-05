@@ -9,8 +9,10 @@ html {
 }
 
 body {
-    background-color: #75b4e3;
+    background-color: #253E50;
     font-family: "Source Sans Pro", sans-serif;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -20,7 +22,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 95vw;
 }
 
 
@@ -37,6 +38,11 @@ main {
 
 /*header*/
 
+header {
+    color: #fff;
+    text-align: center;
+}
+
 h1,
 h2 {
     font-family: "Playfair Display", serif;
@@ -44,44 +50,45 @@ h2 {
 
 .icon {
     margin: 10px;
-    height: 30px;
+    height: 40px;
 }
 
 
 /*sezione di input*/
 
 input {
-    width: 75vw;
-    padding: 5px;
+    width: 55vw;
+    padding: 10px;
     margin: 5px 0px;
+    border-radius: 10px;
+    border-style: none;
 }
 
-#response {
-    position: relative;
-    top: 20px;
-    left: 5px;
+input:focus {
+    outline: none;
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
+}
+
+#save {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: none;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 
 /*temperatura e vento*/
-
-@media only screen and (min-width: 500px) {
-    #info {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 95vw;
-    }
-    #info-temperatura,
-    #info-vento {
-        margin: 20px 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 60vh;
-    }
-}
 
 #weather {
     height: 150px;
@@ -103,11 +110,7 @@ input {
 }
 
 table {
-    min-height: 90vh;
-    width: 105vw;
-}
-
-tr {
+    min-height: 88vh;
     width: 95vw;
 }
 
@@ -119,12 +122,17 @@ tr:nth-child(odd) {
     background-color: #f2f2f2;
 }
 
+tr:nth-child(even) {
+    color: #fff;
+}
+
 
 /*footer*/
 
 footer {
-    width: 95vw;
+    width: 100vw;
     text-align: center;
+    background-color: #eeeeee;
 }
 
 
@@ -146,4 +154,47 @@ td {
 #temp {
     font-size: 3em;
     font-weight: bolder;
+}
+
+@media only screen and (max-width: 499px) {
+    #info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+        border-radius: 10px;
+        background-color: #fff;
+        margin-bottom: 3px;
+        min-height: 55vh;
+    }
+    #info-temperatura,
+    #info-vento {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    #info {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 90vw;
+        border-radius: 10px;
+        background-color: #fff;
+        margin-bottom: 3px;
+    }
+    #info-temperatura,
+    #info-vento {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 55vh;
+    }
 }
