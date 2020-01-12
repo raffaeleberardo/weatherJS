@@ -17,7 +17,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    min-height: 100vh;
+    min-height: 95vh;
 }
 
 #input {
