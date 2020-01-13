@@ -1,4 +1,4 @@
-//Api key creata per start2impact come variabile d'ambiente
+//api_key creata per start2impact come variabile d'ambiente
 let api_key = process.env.API_KEY;
 //primo piano
 //show table button
@@ -32,6 +32,7 @@ input_field.focus();
 input_field.select();
 input_field.addEventListener("keyup", paeseUrl);
 window.addEventListener("load", firstLoad);
+//funzioni mostra e nascondi dettagli
 show_table.addEventListener("click", function() {
     table.style.width = "100%";
 });
@@ -71,7 +72,6 @@ function getWeather(url) {
         type: 'GET'
     });
 }
-
 
 function callback(data) {
     //salvataggio informazioni nelle singole variabili
