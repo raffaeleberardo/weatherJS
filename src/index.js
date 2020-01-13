@@ -1,6 +1,9 @@
 //Api key creata per start2impact come variabile d'ambiente
 let api_key = process.env.API_KEY;
 //primo piano
+//show table button
+const show_table = document.querySelector("#show-table");
+const hide_table = document.querySelector("#hide-table");
 //input
 const input_field = document.querySelector("input");
 const response_img = document.querySelector("#response");
@@ -15,6 +18,11 @@ const wind_icon = document.querySelector("#wind-icon");
 const wind_field = document.querySelector("#wind-speed");
 const view_field = document.querySelector("#view");
 const pressure_field = document.querySelector("#pressure");
+//info tabella
+const table = document.querySelector("#table");
+const massima_field = document.querySelector("#massima");
+const minima_field = document.querySelector("#minima");
+const percepita_field = document.querySelector("#percepita");
 
 //main 
 //global variables
@@ -24,6 +32,14 @@ input_field.focus();
 input_field.select();
 input_field.addEventListener("keyup", paeseUrl);
 window.addEventListener("load", firstLoad);
+show_table.addEventListener("click", function() {
+    table.style.width = "100%";
+});
+
+hide_table.addEventListener("click", function() {
+    table.style.width = "0";
+});
+
 
 function paeseUrl() {
     if (input_field.value !== "Inserisci città") {
@@ -69,6 +85,10 @@ function callback(data) {
     const wind_speed = data.wind.speed;
     const view = data.visibility;
     const pressure = main.pressure;
+    //dati tabella
+    const massima = data.main.temp_max;
+    const minima = data.main.temp_min;
+    const percepita = data.main.feels_like;
     //trasferimento dati nei campi HTML
     //primo piano
     paese_field.innerHTML = data.name + data.sys.country.sub();
@@ -79,11 +99,15 @@ function callback(data) {
     img_field[1].style.fontSize = "100px";
     description = description.replace(description[0], description[0].toUpperCase());
     description_field.textContent = description;
-    temp_field.textContent = temperatura + "° C";
+    temp_field.textContent = temperatura + "°C";
     //dettagli
     humidity_field.textContent = humidity + "%";
     wind_icon.className = wind_icon.className.replace(/\d+/g, wind_direction);
     wind_field.textContent = (wind_speed === undefined) ? "-" : (wind_speed + " m/s");
     view_field.textContent = (view / 1000) + "km";
     pressure_field.textContent = (pressure / 100) + " mbar";
+    //compilazione campi tabella
+    massima_field.textContent = massima + "°C";
+    minima_field.textContent = minima + "°C";
+    percepita_field.textContent = percepita + "°C";
 }

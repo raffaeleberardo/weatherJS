@@ -19,7 +19,55 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    min-height: 96vh;
+    min-height: 90vh;
+}
+
+#table {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: rgba(70, 70, 70, 0.75);
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+#hide-table {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 2.5em;
+    margin-left: 50px;
+    color: #fff;
+    cursor: pointer;
+}
+
+table {
+    min-height: 100%;
+    min-width: 100%;
+    border-collapse: collapse;
+    font-size: 1.5em;
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(70, 70, 70, 1);
+}
+
+td {
+    color: #fff;
+    text-align: center;
 }
 
 #input {
@@ -96,6 +144,7 @@ footer {
 
 #show-table {
     font-size: 1.7em;
+    cursor: pointer;
 }
 
 input {
