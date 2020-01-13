@@ -104,7 +104,7 @@ function callback(data) {
     humidity_field.textContent = humidity + "%";
     wind_icon.className = wind_icon.className.replace(/\d+/g, wind_direction);
     wind_field.textContent = (wind_speed === undefined) ? "-" : (wind_speed + " m/s");
-    view_field.textContent = (view === NaN) ? "-" : ((view / 1000) + "km");
+    view_field.textContent = (isNaN(view)) ? "-" : ((view / 1000) + "km");
     pressure_field.textContent = (pressure / 100) + " mbar";
     //compilazione campi tabella
     massima_field.textContent = massima + "°C";
