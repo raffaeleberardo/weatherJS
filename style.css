@@ -153,21 +153,21 @@ input {
 }
 
 #paese {
-    font-size: 3.5em;
+    font-size: 2.5em;
     font-weight: 800;
     text-align: center;
 }
 
 #id-paese {
-    font-size: 1.5em;
+    font-size: 0.5em;
 }
 
 #description {
-    font-size: 2em;
+    font-size: 1em;
 }
 
 #temperatura {
-    font-size: 3.5em;
+    font-size: 2.5em;
     font-weight: 500;
 }
 
@@ -186,6 +186,18 @@ input {
         left: -50px;
         color: rgba(0, 0, 0, 0.1);
     }
+    #paese {
+        font-size: 3em;
+    }
+    #id-paese {
+        font-size: 1em;
+    }
+    #description {
+        font-size: 1.5em;
+    }
+    #temperatura {
+        font-size: 3em;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -193,5 +205,17 @@ input {
         font-size: 70vh;
         top: -80px;
         left: -60px;
+    }
+    #paese {
+        font-size: 3.5em;
+    }
+    #id-paese {
+        font-size: 1.5em;
+    }
+    #description {
+        font-size: 2em;
+    }
+    #temperatura {
+        font-size: 3.5em;
     }
 }
