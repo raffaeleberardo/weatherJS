@@ -96,16 +96,15 @@ function callback(data) {
     for (let i = 0; i < img_field.length; i++) {
         img_field[i].className = "wi wi-owm-" + ((data.sys.sunrise < data.dt && data.dt < data.sys.sunset) ? "day-" : "night-") + icon;
     }
-    img_field[1].style.fontSize = "100px";
     description = description.replace(description[0], description[0].toUpperCase());
     description_field.textContent = description;
     temp_field.textContent = temperatura + "°C";
     //dettagli
     humidity_field.textContent = humidity + "%";
     wind_icon.className = (wind_direction !== undefined) ? wind_icon.className.replace(/\d+/g, wind_direction) : wind_icon.className.replace(/\d+/g, "0");
-    wind_field.textContent = (wind_speed === undefined) ? "-" : (wind_speed + " m/s");
+    wind_field.textContent = (wind_speed === undefined) ? "-" : (wind_speed + "m/s");
     view_field.textContent = (isNaN(view)) ? "-" : ((view / 1000) + "km");
-    pressure_field.textContent = (pressure / 100) + " mbar";
+    pressure_field.textContent = (pressure / 100) + "mbar";
     //compilazione campi tabella
     massima_field.textContent = massima + "°C";
     minima_field.textContent = minima + "°C";

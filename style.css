@@ -162,6 +162,10 @@ input {
     font-size: 1em;
 }
 
+#i-size {
+    font-size: 100px;
+}
+
 #description {
     font-size: 1em;
 }
