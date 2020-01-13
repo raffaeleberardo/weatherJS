@@ -44,8 +44,13 @@ hide_table.addEventListener("click", function() {
 
 function paeseUrl() {
     if (input_field.value !== "Inserisci città") {
-        paese = input_field.value;
-        getWeather(url + "q=" + paese);
+        if (/\d/.test(input_field.value)) {
+            alert("NON PUOI INSERIRE NUMERI!");
+            input_field.value = "";
+        } else {
+            paese = input_field.value;
+            getWeather(url + "q=" + paese);
+        }
     }
 }
 
