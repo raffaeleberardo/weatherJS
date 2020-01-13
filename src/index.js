@@ -13,6 +13,7 @@ const temp_field = document.querySelector("#temperatura");
 const humidity_field = document.querySelector("#humidity");
 const wind_icon = document.querySelector("#wind-icon");
 const wind_field = document.querySelector("#wind-speed");
+const view_field = document.querySelector("#view");
 const pressure_field = document.querySelector("#pressure");
 
 //main 
@@ -32,9 +33,7 @@ function paeseUrl() {
 }
 
 function firstLoad() {
-    if (localStorage.city !== undefined) {
-        getWeather(url + "q=" + localStorage.city)
-    } else if ("geolocation" in navigator) {
+    if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(function(position) {
             getWeather(url + "lat=" + position.coords.latitude + "&lon=" + position.coords.longitude);
         });
@@ -68,6 +67,7 @@ function callback(data) {
     const humidity = main.humidity;
     const wind_direction = data.wind.deg;
     const wind_speed = data.wind.speed;
+    const view = data.visibility;
     const pressure = main.pressure;
     //trasferimento dati nei campi HTML
     //primo piano
@@ -84,5 +84,6 @@ function callback(data) {
     humidity_field.textContent = humidity + "%";
     wind_icon.className = wind_icon.className.replace(/\d+/g, wind_direction);
     wind_field.textContent = (wind_speed === undefined) ? "-" : (wind_speed + " m/s");
+    view_field.textContent = (view / 1000) + "km";
     pressure_field.textContent = (pressure / 100) + " mbar";
 }

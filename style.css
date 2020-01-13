@@ -8,6 +8,8 @@ body {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 1.2em;
     background-color: rgba(185, 211, 254, 0.5);
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -17,7 +19,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    min-height: 95vh;
+    min-height: 96vh;
 }
 
 #input {
@@ -40,8 +42,23 @@ main {
     align-items: baseline;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    justify-self: flex-end;
+    margin-top: 10px;
+    background-color: rgba(185, 211, 254, 1);
+}
+
 
 /*icone*/
+
+#response {
+    position: relative;
+    top: 10px;
+    left: 7px;
+    height: 30px;
+}
 
 .icon {
     height: 32px;
@@ -54,21 +71,20 @@ main {
 
 #wind-icon {
     position: relative;
-    top: 8px;
+    top: 13px;
     margin-right: 7px;
     font-size: 40px;
+}
+
+#view-icon {
+    position: relative;
+    top: 10px;
+    margin-left: 5px;
 }
 
 #barometro {
     position: relative;
     top: 10px;
-}
-
-#response {
-    position: relative;
-    top: 7px;
-    left: 7px;
-    height: 30px;
 }
 
 
@@ -78,8 +94,12 @@ main {
     display: none;
 }
 
+#show-table {
+    font-size: 1.7em;
+}
+
 input {
-    padding: 5px;
+    padding: 8px;
     width: 75vw;
 }
 
@@ -102,25 +122,27 @@ input {
     font-weight: 500;
 }
 
-@media only screen and (min-width: 600px) {
+#logoSito {
+    height: 60px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+@media only screen and (min-width: 900px) {
     #background-weather {
         display: block;
         z-index: -1;
-        font-size: 20vh;
+        font-size: 30vh;
         position: absolute;
         left: -50px;
-        color: rgba(0, 0, 0, 0.2);
+        color: rgba(0, 0, 0, 0.1);
     }
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1024px) {
     #background-weather {
-        display: block;
-        z-index: -1;
         font-size: 70vh;
-        position: absolute;
-        top: -30px;
+        top: -80px;
         left: -60px;
-        color: rgba(0, 0, 0, 0.2);
     }
 }
