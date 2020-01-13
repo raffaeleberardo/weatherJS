@@ -102,7 +102,7 @@ function callback(data) {
     temp_field.textContent = temperatura + "°C";
     //dettagli
     humidity_field.textContent = humidity + "%";
-    wind_icon.className = wind_icon.className.replace(/\d+/g, wind_direction);
+    wind_icon.className = (wind_direction !== undefined) ? wind_icon.className.replace(/\d+/g, wind_direction) : wind_icon.className.replace(/\d+/g, "0");
     wind_field.textContent = (wind_speed === undefined) ? "-" : (wind_speed + " m/s");
     view_field.textContent = (isNaN(view)) ? "-" : ((view / 1000) + "km");
     pressure_field.textContent = (pressure / 100) + " mbar";
