@@ -109,7 +109,7 @@ function callback(data) {
     wind_icon.className = (wind_direction !== undefined) ? wind_icon.className.replace(/\d+/g, wind_direction) : wind_icon.className.replace(/\d+/g, "0");
     wind_field.textContent = (wind_speed === undefined) ? "-" : (wind_speed + "m/s");
     view_field.textContent = (isNaN(view)) ? "-" : ((view / 1000) + "km");
-    pressure_field.textContent = (pressure / 100) + "mbar";
+    pressure_field.textContent = pressure + "mbar";
     //compilazione campi tabella
     massima_field.textContent = massima + "°C";
     minima_field.textContent = minima + "°C";
