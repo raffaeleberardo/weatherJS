@@ -92,7 +92,8 @@ td {
 
 footer {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
     justify-self: flex-end;
     margin-top: 10px;
     background-color: rgba(185, 211, 254, 1);
@@ -163,6 +164,7 @@ input {
 }
 
 #i-size {
+    margin: 20px;
     font-size: 100px;
 }
 
